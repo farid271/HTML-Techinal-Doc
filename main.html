@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>HTML Documentation</header>
+            <ul>
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#Anatomy_of_an_element">Anatomy of an element</a></li>
+                <li><a class="nav-link" href="#Basic_HTML_structure">Basic HTML structure</a></li>
+                <li><a class="nav-link" href="#Marking_up_text">Marking up text</a></li>
+                <li><a class="nav-link" href="#Links">Links</a></li>
+                <li><a class="nav-link" href="#Reference">Reference</a></li> 
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>
+                        HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Anatomy_of_an_element">
+                <header>Anatomy of an element</header>
+                <article>
+                    <p>The main parts of an element are as follows</p>
+                    <ul>
+                        <li>The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect.</li>
+                        <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends.  Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.</li>
+                        <li>The content: This is the element's content, which is just text.</li>
+                        <li>The element: The opening tag, the closing tag, and the content together comprise the element.
+                        </li>
+                        <pre>
+                            <code>
+                                &lt;p&gt; Hello World!&lt;/p&gt;
+                            </code>
+                        </pre>
+                        <p>In this case, &lt;p&gt; is the opening tag, &lt;/p&gt; is the closing tag, Hello World!, is the content, and everything together is an element.</p>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Basic_HTML_structure">
+                <header>Basic HTML structure</header>
+                <article>
+                    <p>Now we are going to look at what makes up a basic HTML structure:</p>
+                    <pre>
+                        <code>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en-US"&gt;
+                                &lt;head&gt;
+                                    &lt;meta charset="utf-8" /&gt;
+                                    &lt;meta name="viewport" content="width=device-width" /&gt;
+                                    &lt;title&gt;My test page&lt;/title&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                    &lt;img src="images/firefox-icon.png" alt="My test image" /&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+
+                        </code>
+                    </pre>
+                    <ul>
+                        <li>
+                            &lt;!DOCTYPE html&gt; :  It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly.
+
+                        </li>
+                        <li>
+                            &lt;html&gt;&lt;/html&gt; : This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, setting the primary language of the document.
+                        </li>
+                        <li>
+                            &lt;head&gt;&lt;/head&gt; : This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+
+                        </li>
+                        <li>
+                            &lt;meta charset="utf-8"&gt; : This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it.
+                        </li>
+                        <li>
+                            &lt;meta name="viewport" content="width=device-width"&gt;  : This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
+                        </li>
+                        <li>
+                            &lt;title&gt;&lt;/title&gt; : This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark it.
+                        </li>
+                        <li>
+                            &lt;body&gt;&lt;/body&gt; : This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Marking_up_text">
+                <header>Marking up text</header>
+                <article>
+                    <p>
+                        This section will cover some of the essential HTML elements you'll use for marking up the text. We will talk about headings, paragraphs and lists.
+                    </p>
+                    <p>
+                        Heading elements allow you to specify that certain parts of your content are headings or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, &lt;h1&gt; to &lt;h6&gt;
+
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;h1&gt;My main title&lt;/h1&gt;
+                            &lt;h2&gt;My top level heading&lt;/h2&gt;
+                            &lt;h3&gt;My subheading&lt;/h3&gt;
+                            &lt;h4&gt;My sub-subheading&lt;/h4&gt;
+
+                        </code>
+                    </pre>
+                    <p>
+                        For paragraphs, it shown above that &lt;p&gt; elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content
+
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;p&gt;This is a single paragraph&lt;/p&gt;
+                        </code>
+                    </pre>
+                    <p>
+                        Lastly, we have lists. A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
+                    </p>
+                    <ol>
+                        <li>
+                            Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a &lt;ul&gt; element.
+                        </li>
+                        <li>
+                            Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an &lt;ol&gt; element.
+                        </li>
+                    </ol>
+                    <p>
+                        Each item inside the lists is put inside an &lt;li&gt; (list item) element.
+
+                        Example:
+
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;ol&gt;
+	                        &lt;li&gt;Ordered&lt;li&gt;
+                                &lt;li&gt;List&lt;li&gt;
+                            &lt;ol&gt;
+
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section class="main-section" id="Links">
+                <header>Links</header>
+                <article>
+                    <p>
+                        Links are very important; they are what makes the web a web! To add a link, we need to use a simple element, &lt;a&gt; ,"a" being the short form for "anchor". To make text within your paragraph into a link, you need to:
+                    </p>
+                    <ul>
+                        <li>
+                            First, we will type some words. We will use Dominoes Pizza
+                        </li>
+                        <li>
+                            Wrap the text in an &lt;a&gt; element, like below:
+                        </li>
+                    </ul>
+                    <pre>
+                        <code>
+                            &lt;a&gt;Dominoes Pizza&lt;/a&gt;
+                        </code>
+                    </pre>
+                    <ul>
+                        <li>
+                            Give the &lt;a&gt; element a href attribute, as shown below:
+                        </li>
+                    </ul>
+                    <pre>
+                        <code>
+                            &lt;a href=""&gt;Dominoes Pizza&lt;/a&gt;
+                        </code>
+                    </pre>
+                    <ul>
+                        <li>
+                            Fill in the value of this attribute with the web address that you want the link to:
+                        </li>
+                    </ul>
+                    <pre>
+                        <code>
+                            &lt;a href="https://www.dominos.com"&gt;Dominoes Pizza&lt;/a&gt;
+                        </code>
+                    </pre>
+                    <p>
+                        You might get unexpected results if you omit the https://, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                    <p>All the information provided is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">MDN</a></p>
+                </article>
+            </section>
+        </main>
+    </body>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
